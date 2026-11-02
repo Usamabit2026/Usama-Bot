@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usama Bot</title>
+<style>
+body{background:#101827;color:white;font-family:Arial;text-align:center;padding:20px}
+.card{background:#1e293b;padding:22px;border-radius:15px;margin-top:25px}
+h1{color:#38bdf8}
+button{background:#0ea5e9;color:white;border:0;padding:14px 25px;border-radius:8px;font-size:17px}
+</style>
+</head>
+<body>
+<h1>USAMA BOT</h1>
+<p>Quotex Demo Signal Dashboard</p>
+<div class="card">
+<h2>Demo Signal</h2>
+<h1 id="signal">WAIT</h1>
+<p>Currency: EUR/USD</p>
+<p>Timeframe: 1 Minute</p>
+<button onclick="showSignal()">Generate Demo</button>
+<p id="note">Educational demo only. Not a real prediction.</p>
+</div>
+<script>
+function showSignal(){
+let signals=["UP","DOWN","WAIT"];
+document.getElementById("signal").innerText=
+signals[Math.floor(Math.random()*signals.length)];
+}
+</script>
+</body>
+</html>
