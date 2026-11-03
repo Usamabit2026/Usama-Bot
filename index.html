@@ -1,42 +1,54 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Usama Bot</title>
 <style>
 body{background:#101827;color:white;font-family:Arial;text-align:center;padding:20px}
-.card{background:#1e293b;padding:22px;border-radius:15px;margin-top:25px}
+.card{background:#1e293b;padding:22px;border-radius:15px;margin:20px auto;max-width:420px}
 h1{color:#38bdf8}
-button{background:#0ea5e9;color:white;border:0;padding:14px 25px;border-radius:8px;font-size:17px}
+input{padding:13px;margin:8px;width:85%;border-radius:7px;border:0}
+button{background:#0ea5e9;color:white;border:0;padding:13px 22px;border-radius:8px;font-size:16px;margin:8px}
+.hidden{display:none}
 </style>
 </head>
 <body>
-
 <h1>USAMA BOT</h1>
-<p>Quotex Demo Signal Dashboard</p>
+<p>Trading Dashboard</p>
 
 <div class="card">
-<h2>Demo Signal</h2>
+<h2>License Verification</h2>
+<input id="license" placeholder="Enter License Key">
+<button onclick="verifyLicense()">Verify License</button>
+<p id="status">Please enter your license key.</p>
+</div>
+
+<div id="dashboard" class="hidden">
+<div class="card">
+<h2>Demo Signal Dashboard</h2>
 <h1 id="signal">WAIT</h1>
-<p>Currency: EUR/USD</p>
-<p>Timeframe: 1 Minute</p>
+<p>EUR/USD | 1 Minute</p>
 <button onclick="showSignal()">Generate Demo</button>
-<p>Educational demo only. Not a real prediction.</p>
+<p>Educational demo only. Not a real market prediction.</p>
+</div>
 </div>
 
 <div class="card">
 <h2>Admin Panel</h2>
-<p>Admin login setup coming soon</p>
-<p>License Key System</p>
+<p>Admin tools will be connected securely through Supabase.</p>
 </div>
 
 <script>
+function verifyLicense(){
+document.getElementById("status").innerText=
+"License verification is not connected yet. Please wait for admin setup.";
+}
 function showSignal(){
 let signals=["UP","DOWN","WAIT"];
 document.getElementById("signal").innerText=
 signals[Math.floor(Math.random()*signals.length)];
 }
 </script>
-
 </body>
 </html>
