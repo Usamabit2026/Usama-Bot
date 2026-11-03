@@ -11,16 +11,25 @@ button{background:#0ea5e9;color:white;border:0;padding:14px 25px;border-radius:8
 </style>
 </head>
 <body>
+
 <h1>USAMA BOT</h1>
 <p>Quotex Demo Signal Dashboard</p>
+
 <div class="card">
 <h2>Demo Signal</h2>
 <h1 id="signal">WAIT</h1>
 <p>Currency: EUR/USD</p>
 <p>Timeframe: 1 Minute</p>
 <button onclick="showSignal()">Generate Demo</button>
-<p id="note">Educational demo only. Not a real prediction.</p>
+<p>Educational demo only. Not a real prediction.</p>
 </div>
+
+<div class="card">
+<h2>Admin Panel</h2>
+<p>Admin login setup coming soon</p>
+<p>License Key System</p>
+</div>
+
 <script>
 function showSignal(){
 let signals=["UP","DOWN","WAIT"];
@@ -28,11 +37,6 @@ document.getElementById("signal").innerText=
 signals[Math.floor(Math.random()*signals.length)];
 }
 </script>
+
 </body>
 </html>
-<!-- USAMA BOT ADMIN PANEL -->
-<div class="card">
-  <h2>Admin Panel</h2>
-  <p>Admin login setup coming soon</p>
-  <p>License Key System</p>
-</div>
